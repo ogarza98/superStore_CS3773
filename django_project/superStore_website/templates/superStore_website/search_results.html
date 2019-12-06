@@ -1,7 +1,7 @@
 {% extends "superStore_website/base.html" %}
 {% block content %}
 
-    {% for good in goods %}
+    {% for good in results %}
         <article class="media content-section">
           <div class="media-body">
             <div class="article-metadata">
@@ -14,10 +14,6 @@
                       <img src="{{ good.goods_image.url }}" style="width:50%">
                       <button class="button">Add to Cart</button>
                       <b1>{{ good.item_name }}</b1>
-                      <b1>{{ good.price }}</b1>
-                      <b1>{{ good.item_stock }}</b1>
-                      <b1>{{ good.freshness }}</b1>
-                      <p>Description: {{ good.description }}</p>
                   </div>
               </div>
               <p class="article-content">{{ post.content }}</p>

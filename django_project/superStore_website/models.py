@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
+1
 class Good(models.Model):
     ITEM_FRESHNESS = (
         ('G', 'GOOD'),
@@ -14,6 +15,7 @@ class Good(models.Model):
     item_stock = models.IntegerField()
     price = models.FloatField()
     goods_image = models.ImageField(null=True, blank=True, upload_to="goods_image")
+    description = models.CharField(max_length=280)
 
     def __str__(self):
         return self.item_name

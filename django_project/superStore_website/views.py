@@ -1,5 +1,7 @@
 from .models import Good
 from django.shortcuts import render
+from django.db.models import Q
+from django.views.generic import TemplateView, ListView
 
 
 def home(request):
@@ -8,3 +10,13 @@ def home(request):
     }
 
     return render(request, 'superStore_website/home.html', context)
+
+
+def search_results(request):
+    query = request.GET.get('q')
+    results = {
+        'results': Good.objects.filter(Q(item_name__icontains=query))
+    }
+
+    return render(request, 'superStore_website/search_results.html', results)
+
