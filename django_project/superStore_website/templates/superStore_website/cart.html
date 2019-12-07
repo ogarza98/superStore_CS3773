@@ -135,7 +135,7 @@
 
               <div class="d-block my-3">
                 <div class="custom-control custom-radio">
-                  {% for choice in forms.cart %}
+                  {% for choice in forms.paymentType %}
                     <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
                     <label class="custom-control-label" for="credit">{{ choice.choice_text }} </label>
                   {% endfor %}
