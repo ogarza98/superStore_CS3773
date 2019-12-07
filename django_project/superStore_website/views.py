@@ -11,4 +11,4 @@ def home(request):
     return render(request, 'superStore_website/home.html', context)
 
 def cart(request):
-    return HttpResponseRedirect('superStore_website/cart.html')
+    return render(request,'superStore_website/cart.html')
