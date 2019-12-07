@@ -10,7 +10,7 @@ def home(request):
         'goods': Good.objects.all(),
     }
 
-    return render(request, 'superStore_website/home_Daniel.html', context)
+    return render(request, 'superStore_website/home.html', context)
 
 
 def gallery(request):
@@ -19,10 +19,6 @@ def gallery(request):
     }
 
     return render(request, 'superStore_website/gallery.html', context)
-
-
-#def home(request):
-#    return render(request, 'superStore_website/imported_home.html')
 
 
 def login(request):

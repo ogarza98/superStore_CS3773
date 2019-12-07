@@ -1,23 +1,26 @@
 {% extends "superStore_website/base.html" %}
 {% block content %}
 
+<div class="row">
 
     {% for good in goods %}
-
-            <article class="media content-section">
-            <div class="media-body">
-                <div class="article-metadata">
-                    <h4><b>{{ good.item_name }} -  $ {{ good.price }}</b></h4>
-                    <pre class="tab">Stock: {{ good.item_stock }}       Freshness: {{ good.freshness }}</pre>
-                    <button>Add To Cart</button>
-                </div>
-                    <a href="{{ good.goods_image.url }}" data-lightbox="gallery" data-title="{{ good.item_name }}">
-                        <img class="resize" src="{{ good.goods_image.url }}">
-                    </a>
-                    <p class="article-content">{{ post.content }}</p>
-                </div>
-            </article>
-
+            <div class="column">
+                <article class="media content-section">
+                    <div class="media-body">
+                        <div class="article-metadata">
+                            <h4><b>{{ good.item_name }} -  $ {{ good.price }}</b></h4>
+                            <pre class="tab">Stock: {{ good.item_stock }}       Freshness: {{ good.freshness }}</pre>
+                            <button>Add To Cart</button>
+                        </div>
+                        <a href="{{ good.goods_image.url }}" data-lightbox="gallery" data-title="{{ good.item_name }}">
+                            <img class="resize_gallery" src="{{ good.goods_image.url }}" height="130">
+                        </a>
+                        <p class="article-content">{{ post.content }}</p>
+                    </div>
+                </article>
+            </div>
     {% endfor %}
+
+</div>
 
 {% endblock content %}
