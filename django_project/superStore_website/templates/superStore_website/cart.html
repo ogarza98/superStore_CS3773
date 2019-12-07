@@ -49,7 +49,7 @@
 
               </div>
               <!--Grid row-->
-              
+
               <!--email-->
               <div class="md-form mb-5">
                 <input type="text" name="email"class="form-control" placeholder="youremail@example.com">
@@ -135,14 +135,13 @@
 
               <div class="d-block my-3">
                 <div class="custom-control custom-radio">
-                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                  <label class="custom-control-label" for="credit">Credit card</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                  <label class="custom-control-label" for="debit">Debit card</label>
+                  {% for choice in forms.paymentType %}
+                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                    <label class="custom-control-label" for="credit">{{ choice.choice_text }} </label>
+                  {% endfor %}
                 </div>
               </div>
+
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="cc-name">Name on card</label>
@@ -254,3 +253,15 @@
   </main>
   <!--Main layout-->
 {% endblock content %}
+
+
+<!--
+                <div class="custom-control custom-radio">
+                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                  <label class="custom-control-label" for="credit">Credit card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                  <label class="custom-control-label" for="debit">Debit card</label>
+                </div>
+-->

@@ -1,4 +1,5 @@
 from django import forms
+from django.forms.widgets import RadioSelect
 
 class cart(forms.Form):
     STATES = (
@@ -15,12 +16,10 @@ class cart(forms.Form):
     COUNTRY = (
         ('United States','United States'),
     )
-
     PAYMENT_TYPE = (
         ('Credit Card', 'Credit Card'),
         ('Debit Card', 'Debit Card'),
     )
-
     first_name = forms.CharField(max_length=80)
     last_name  = forms.CharField(max_length=80)
     user_name  = forms.CharField(max_length=80)
@@ -29,9 +28,9 @@ class cart(forms.Form):
     altaddress = forms.CharField(max_length=100, required=False)
     #country    = forms.CharField(max_length=20, choices=COUNTRY, default='Choose')
     #state      = forms.CharField(max_length=2, choices=STATES, default='State')
-    zipCode    = forms.CharField(max_length=20)
-    #paymentTyp = forms.ChoiceField(choices=PAYMENT_TYPE, widget=forms.RadioSelect)
-    nameOnCd   = forms.CharField(max_length=160)
-    cardNum    = forms.CharField(max_length=20)
-    expireDt   = forms.CharField(max_length=6)
-    cvv        = forms.CharField(max_length=6)
+    zipCode     = forms.CharField(max_length=20)
+    paymentType = forms.ChoiceField(choices=PAYMENT_TYPE,widget=forms.RadioSelect())
+    nameOnCd    = forms.CharField(max_length=160)
+    cardNum     = forms.CharField(max_length=20)
+    expireDt    = forms.CharField(max_length=6)
+    cvv         = forms.CharField(max_length=6)
