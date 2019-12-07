@@ -10,7 +10,7 @@ urlpatterns = [
     path('checkout/', views.checkout, name='checkout'),
     path('search/', views.search_results, name='search_results'),
     path('gallery/', views.gallery, name='gallery'),
-    path('none/search/', views.no_results, name='none'),
+    path('/none/search/', views.no_results, name='none'),
 ]
 
 if settings.DEBUG:
