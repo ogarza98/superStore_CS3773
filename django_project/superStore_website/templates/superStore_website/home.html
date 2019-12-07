@@ -9,15 +9,16 @@
             </div>
               <img class="resize" src="{{ good.goods_image.url }}" onclick="document.getElementById('modal01').style.display='block'">
               <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-                  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-                  <div class="w3-modal-content w3-animate-zoom">
-                      <img src="{{ good.goods_image.url }}" style="width:50%">
-                      <button class="button">Add to Cart</button>
-                      <b1>{{ good.item_name }}</b1>
-                      <b1>{{ good.price }}</b1>
-                      <b1>{{ good.item_stock }}</b1>
-                      <b1>{{ good.freshness }}</b1>
+                  <div class="modal-content">
+                      <div class="content">
+                          <img class="modal_image" src="{{ good.goods_image.url }}">
+                          <br>{{ good.item_name }} </br>
+                          <br>Price: ${{ good.price }} </br>
+                          <br>Stock: {{ good.item_stock }} </br>
+                          <br>Freshness: {{ good.freshness }} </br>
+                      </div>
                       <p>Description: {{ good.description }}</p>
+                      <button class="button">Add to Cart</button>
                   </div>
               </div>
               <p class="article-content">{{ post.content }}</p>

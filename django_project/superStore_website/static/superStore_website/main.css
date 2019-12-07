@@ -8,6 +8,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
+b1 {
+    float: right;
+    display: block;
+}
+
 ul {
   margin: 0;
 }
@@ -157,14 +162,61 @@ img.resize_gallery {
   max-height:160px
 }
 
+img.modal_image{
+    width: 500px;
+    max-width: 50%;
+    float: left;
+}
+
 /* Buttons */
 .button {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 15px 15px;
+  padding: 5px 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  width: 100px;
+  max-width: 100%;
+  position: relative;
+  left: 69vw;
+}
+
+/* Modal */
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+  border: 4px solid red;
+  padding: 20px;
+}
+
+/*  Test */
+
+.content {
+    width: 80%;
+}
+
+.content img {
+    margin-right: 15px;
+    float: left;
+}
+
+.content h3,
+.content p{
+    margin-left: 15px;
+    display: block;
+    margin: 2px 0 0 0;
+}
+
+br {
+    text-align: right;
 }
