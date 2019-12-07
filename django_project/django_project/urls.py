@@ -19,4 +19,5 @@ urlpatterns = [
     path('search/', include('superStore_website.urls')),
     path('home/', include('superStore_website.urls')),
     path('gallery/', include('superStore_website.urls')),
+    path('none/', include('superStore_website.urls')),
 ]

@@ -15,7 +15,7 @@ def home(request):
 
 def gallery(request):
     context = {
-        'goods':Good.objects.all(),
+        'goods': Good.objects.all(),
     }
 
     return render(request, 'superStore_website/gallery.html', context)
@@ -35,4 +35,12 @@ def search_results(request):
         'results': Good.objects.filter(Q(item_name__icontains=query))
     }
 
-    return render(request, 'superStore_website/search_results.html', results)
+    if not query:
+        no_results()
+
+    else:
+        return render(request, 'superStore_website/search_results.html', results)
+
+
+def no_results(request):
+    return render(request, 'superStore_website/no_results.html')
