@@ -1,12 +1,12 @@
 {% extends "superStore_website/base.html" %}
 {% block content %}
 
-    {% for good in goods %}
+    {% for good in results %}
 
         <article class="media content-section">
           <div class="media-body">
             <div class="article-metadata">
-                <a href="{% url 'product' %}" id="Button">
+                <a href="{% url 'product' %}">
                     <h4><b>{{ good.item_name }} -  $ {{ good.price }}</b></h4>
                 </a>
                 <button>Add To Cart</button>
@@ -14,10 +14,6 @@
                 <a href="{{ good.goods_image.url }}" data-lightbox="gallery" data-title="{{ good.item_name }}">
                     <img class="resize" src="{{ good.goods_image.url }}">
                 </a>
-                <form action="{% url 'product' %}">
-                    <input type="hidden" name="p" value="{{ good.item_name }}" />
-                    <input type="submit" value="View Product Details">
-                </form>
               <p class="article-content">{{ post.content }}</p>
           </div>
         </article>

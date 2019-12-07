@@ -2,43 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71244680-6467-43af-8c6e-35c48ae276df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/superStore_CS3773.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/superStore_CS3773.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/superStore_website/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/superStore_website/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/superStore_website/static/superStore_website/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/superStore_website/static/superStore_website/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_project/superStore_website/templates/superStore_website/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/superStore_website/templates/superStore_website/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/superStore_website/templates/superStore_website/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/superStore_website/templates/superStore_website/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/superStore_website/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/superStore_website/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/superStore_website/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/superStore_website/views.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="superStore_CS3773" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TadiSgRNmtD02pSTHjZFKMFJal" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/django_project/superStore_website" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/django-bootstrap-modal-forms-1.5.0" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Erick\Documents\Fall 2019\Software Engineering\superStore_CS3773\django_project\superStore_website\static\superStore_website" />
       <recent name="$PROJECT_DIR$/django_project/superStore_website" />
       <recent name="$PROJECT_DIR$/django_project/superstore" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Erick\Documents\Fall 2019\Software Engineering\superStore_CS3773\django_project\media\goods_image" />
+      <recent name="C:\Users\Erick\Documents\Fall 2019\Software Engineering\superStore_CS3773\django_project\media\test_image" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -60,10 +77,38 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="481" y="283" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575580325475">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state x="481" y="283" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.960@0.0.1440.960" timestamp="1575580325475" />
+    <state x="409" y="336" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1575579820247">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state x="409" y="336" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.960@0.0.1440.960" timestamp="1575579820247" />
+    <state x="861" y="235" key="FileChooserDialogImpl" timestamp="1575658929355">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state x="861" y="235" key="FileChooserDialogImpl/0.0.1440.960@0.0.1440.960" timestamp="1575658929355" />
+    <state x="399" y="83" key="SettingsEditor" timestamp="1575615820184">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state x="399" y="83" key="SettingsEditor/0.0.1440.960@0.0.1440.960" timestamp="1575615820184" />
+    <state x="417" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1575657632190">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state x="417" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1575657632190" />
+    <state x="383" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1575674578242">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state x="383" y="205" width="672" height="678" key="search.everywhere.popup/0.0.1440.960@0.0.1440.960" timestamp="1575674578242" />
   </component>
 </project>

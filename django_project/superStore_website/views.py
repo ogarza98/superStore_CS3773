@@ -20,3 +20,16 @@ def search_results(request):
 
     return render(request, 'superStore_website/search_results.html', results)
 
+
+def product(request):
+    query = request.GET.get('p')
+    results = {
+        'results': Good.objects.filter(Q(item_name__icontains=query))
+    }
+
+    return render(request, 'superStore_website/product.html', results)
+
+
+def help_pg(request):
+
+    return render(request, 'superStore_website/help.html')
