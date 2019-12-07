@@ -12,3 +12,6 @@ def home(request):
 
 def cart(request):
     return render(request,'superStore_website/cart.html')
+
+def receipt(request):
+    return render(request,'superStore_website/receipt.html')
