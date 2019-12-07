@@ -14,6 +14,9 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.css" rel="stylesheet" />
 
+    <!-- Link for search button -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     {% if title %}
         <title>Superstore - {{ title }}</title>
     {% else %}
@@ -25,17 +28,21 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
           <a class="navbar-brand mr-4" href="{% url 'home' %}">Superstore Website</a>
+            <form action="{% url 'search_results' %}" method="get"> <!-- Search bar code here start -->
+                <input name="q" type="text" placeholder="Search..." size = 20 style ="font-size:15px;" type="text">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form> <!-- Search bar code here end -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-                <a class="nav-item nav-link" href="#">Gallery</a>
+                <a class="nav-item nav-link" href="/gallery">Gallery</a>
                 <a class="nav-item nav-link" href="#">Tasks</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+                <a class="nav-item nav-link" href="/home">Home</a>
                 <a class="nav-item nav-link" href="#">Cart</a>
             </div>
           </div>

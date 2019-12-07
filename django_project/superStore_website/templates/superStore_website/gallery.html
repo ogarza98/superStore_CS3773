@@ -1,0 +1,16 @@
+{% extends "superStore_website/base.html" %}
+{% block content %}
+
+
+    {% for good in goods %}
+        <article class="media content-section">
+          <div class="media-body">
+                <a href="{{ good.goods_image.url }}" data-lightbox="gallery" data-title="{{ good.item_name }}">
+                    <img class="resize" src="{{ good.goods_image.url }}">
+                </a>
+              <p class="article-content">{{ post.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+
+{% endblock content %}

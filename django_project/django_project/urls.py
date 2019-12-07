@@ -19,4 +19,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('superStore_website.urls')),
+    path('login/', include('superStore_website.urls')),
+    path('checkout/', include('superStore_website.urls')),
+    path('search/', include('superStore_website.urls')),
+    path('home/', include('superStore_website.urls')),
+    path('gallery/', include('superStore_website.urls')),
 ]
