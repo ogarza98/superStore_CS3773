@@ -8,3 +8,6 @@ def home(request):
     }
 
     return render(request, 'superStore_website/home.html', context)
+
+def cart(request):
+    return render(request, 'superStore_website/cart.html')
