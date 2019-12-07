@@ -39,11 +39,12 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-
-
+                <a class="nav-item nav-link" href="/gallery">Gallery</a>
                 <a class="nav-item nav-link" href="#">Tasks</a>
             </div>
             <div class="navbar-nav">
+
+                <a class="nav-item nav-link" href="/home">Home</a>
               {% if user.is_authenticated %}
                 <a class="nav-item nav-link" href="#">Cart</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
