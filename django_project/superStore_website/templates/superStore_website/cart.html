@@ -1,5 +1,6 @@
 {% extends "superStore_website/home.html" %}
 {% block content %}
+
   <!--Main layout-->
   <main class="mt-5 pt-4">
     <div class="container wow fadeIn">
@@ -99,7 +100,11 @@
                   <label for="state">State</label>
                   <select class="custom-select d-block w-100" id="state" required>
                     <option value="">Choose...</option>
-                    <option>California</option>
+                    {% with 'AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY' as list %}
+                        {% for state in list.split %}
+                            <option>{{ state }}</option>
+                        {% endfor %}
+                    {% endwith %}
                   </select>
                   <div class="invalid-feedback">
                     Please provide a valid state.
