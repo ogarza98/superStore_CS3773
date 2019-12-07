@@ -5,6 +5,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('home/', views.home, name='home'),
+    path('login/', views.login, name='login'),
+    path('checkout/', views.checkout, name='checkout'),
+    path('search/', views.search_results, name='search_results'),
+    path('gallery/', views.gallery, name='gallery'),
 ]
 
 if settings.DEBUG:
