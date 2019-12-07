@@ -1,16 +1,23 @@
 {% extends "superStore_website/base.html" %}
 {% block content %}
-<h1>
-Thank you for your purchase
-</br>First Name: {{ firstName }}
-</br>Last Name: {{ lastName }}
-</br>userName: {{ userName }}
-</br>Email: {{ email }}
-</br>Address: {{ address }}
-</br>Alternate Address: {{ altaddress }}
-</br>Name on Card: {{ nameOnCd }}
-</br>Card Number: {{ cardNum }}
-</br>Expiration Date: {{ expireDt }}
-</br>CVV number: {{ cvv }}   
-</h1>
+<main>
+    <div class="container wow fadeIn">
+
+      <!-- Heading -->
+      <h2 class="my-5 h2 text-center">Checkout form</h2>
+        <h1> Thank you for your purchase
+        </br>First Name: {{ firstName }}
+        </br>Last Name: {{ lastName }}
+        </br>userName: {{ userName }}
+        </br>Email: {{ email }}
+        </br>Address: {{ address }}
+        </br>Alternate Address: {{ altaddress }}
+        </br>Name on Card: {{ nameOnCd }}
+        </br>Card Number: {{ cardNum }}
+        </br>Expiration Date: {{ expireDt }}
+        </br>CVV number: {{ cvv }}   
+        </h1>
+    </div>
+</main>
+<!--Main layout-->
 {% endblock content %}
