@@ -4,17 +4,19 @@
     <div class="container wow fadeIn">
 
       <!-- Heading -->
+      <div>
       <h2 class="my-5 h2 text-center">Order Confirmation</h2>
         <h1> Thank you for your purchase!</h1>
           <h3>User Information:</h3>
-            </br>First Name: {{ firstName }} Last Name: {{ lastName }}
-            </br>Email: {{ email }}
-            </br>Shipping Address: {{ address }}
+            <h4>First Name: {{ firstName }} Last Name: {{ lastName }}</h4>
+            <h4>Email: {{ email }}</h4>
+            <h4>Shipping Address: {{ address }}</h4>
           <h3>Billing Information:</h3>
-            </br>Billing Address: {{ altaddress }}
-            </br>Card Number: {{ cardNum }}
+            <h4>Billing Address: {{ altaddress }}</h4>
+            <h4>Card Number: {{ cardNum }}</h4>
+      </div>
                <!-- Cart -->
-            <h1>Your Order</h1>
+            <h1 class="my-5 h1 text-center">Your Order</h1>
             <ul class="list-group mb-3 z-depth-1">
               <li class="list-group-item d-flex justify-content-between lh-condensed">
                 <div>
