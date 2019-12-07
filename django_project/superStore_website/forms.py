@@ -22,7 +22,7 @@ class cart(forms.Form):
     )
 
     first_name = forms.CharField(max_length=80)
-    last_name  = forms.CharField(max_length=80)
+    #last_name  = forms.CharField(max_length=80)
     #user_name  = forms.CharField(max_length=80)
     #email      = forms.CharField(max_length=80)
     #street     = forms.CharField(max_length=100)

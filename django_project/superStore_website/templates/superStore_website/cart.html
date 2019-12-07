@@ -17,8 +17,8 @@
           <div class="card">
 
             <!--Card content-->
-            <form class="card-body" mehtod='POST' action="{% url 'receipt' %}">
-            {% csrf_token %}
+            <form class="card-body" method='POST' action="{% url 'receipt' %}">
+               {% csrf_token %}
 
               <!--Grid row-->
               <div class="row">
@@ -28,8 +28,8 @@
 
                   <!--firstName-->
                   <div class="md-form ">
-                    <input type="text" id="first_name" class="form-control">
-                    <label for="first_Name" class="">First name</label>
+                    <input type="text" name="first_name" class="form-control">
+                    <label>First name</label>
                   </div>
 
                 </div>
