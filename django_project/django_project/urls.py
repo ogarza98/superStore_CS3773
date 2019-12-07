@@ -14,4 +14,10 @@ urlpatterns = [
          auth_views.PasswordChangeDoneView.as_view(template_name='users/change-password_done.html'),
          name='password_change_done'),
     path('', include('superStore_website.urls')),
+    path('login/', include('superStore_website.urls')),
+    path('checkout/', include('superStore_website.urls')),
+    path('search/', include('superStore_website.urls')),
+    path('home/', include('superStore_website.urls')),
+    path('gallery/', include('superStore_website.urls')),
+    path('none/', include('superStore_website.urls')),
 ]
