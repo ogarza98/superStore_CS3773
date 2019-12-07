@@ -1,6 +1,7 @@
 from .models import Good
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from superStore_website.forms import cart
 
 
 def home(request):
@@ -14,4 +15,10 @@ def cart(request):
     return render(request,'superStore_website/cart.html')
 
 def receipt(request):
-    return render(request,'superStore_website/receipt.html')
+    if request.method == "POST":
+        form = cart(request.POST)
+        if form.is_valid():
+            fname = form.cleaned_data['first_name']
+    else:
+        form = cart()
+    return render(request,'superStore_website/receipt.html',{"firstName": fname})

@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.forms import ModelForm
 
 class Good(models.Model):
     ITEM_FRESHNESS = (
@@ -51,4 +52,3 @@ class Cart(models.Model):
     cardNum    = models.IntegerField()
     expireDt   = models.IntegerField()
     cvv        = models.CharField(max_length=5)
-

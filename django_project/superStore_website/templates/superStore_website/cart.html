@@ -1,7 +1,7 @@
 {% extends "superStore_website/home.html" %}
 {% block content %}
   <!--Main layout-->
-  <main >
+  <main>
     <div class="container wow fadeIn">
 
       <!-- Heading -->
@@ -17,7 +17,8 @@
           <div class="card">
 
             <!--Card content-->
-            <form class="card-body" method='POST' action="{% url 'receipt' %}">
+            <form class="card-body" mehtod='POST' action="{% url 'receipt' %}">
+            {% csrf_token %}
 
               <!--Grid row-->
               <div class="row">
@@ -27,8 +28,8 @@
 
                   <!--firstName-->
                   <div class="md-form ">
-                    <input type="text" id="firstName" class="form-control">
-                    <label for="firstName" class="">First name</label>
+                    <input type="text" id="first_name" class="form-control">
+                    <label for="first_Name" class="">First name</label>
                   </div>
 
                 </div>
@@ -39,8 +40,8 @@
 
                   <!--lastName-->
                   <div class="md-form">
-                    <input type="text" id="lastName" class="form-control">
-                    <label for="lastName" class="">Last name</label>
+                    <input type="text" id="last_name" class="form-control">
+                    <label for="last_name" class="">Last name</label>
                   </div>
 
                 </div>
@@ -54,7 +55,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">@</span>
                 </div>
-                <input type="text" class="form-control py-0" placeholder="Username" aria-describedby="basic-addon1">
+                <input type="text" for="user_name" id="user_name" class="form-control py-0" placeholder="Username" aria-describedby="basic-addon1">
               </div>
 
               <!--email-->
