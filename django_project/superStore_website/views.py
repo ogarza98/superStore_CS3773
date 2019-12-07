@@ -2,16 +2,13 @@ from django.http import HttpResponse
 
 from .models import Good
 from django.shortcuts import render
-<<<<<<< HEAD
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.models import User
 
 
 
-=======
 from django.db.models import Q
->>>>>>> daniel
 
 
 def home(request):
@@ -24,8 +21,6 @@ def home(request):
 
     return render(request, 'superStore_website/home.html', context)
 
-<<<<<<< HEAD
-=======
 
 def gallery(request):
     context = {
@@ -58,4 +53,3 @@ def search_results(request):
 
 def no_results(request):
     return render(request, 'superStore_website/no_results.html')
->>>>>>> daniel
