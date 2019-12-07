@@ -6,16 +6,13 @@
       <!-- Heading -->
       <h2 class="my-5 h2 text-center">Order Confirmation</h2>
         <h1> Thank you for your purchase!</h1>
-          <table>
-            <tr>User Information:
-              </br>First Name: {{ firstName }} Last Name: {{ lastName }}
-              </br>Email: {{ email }}
-              </br>Shipping Address: {{ address }}
-            </tr>
-            <tr>Billing Information:
-              </br>Billing Address: {{ altaddress }}
-              </br>Card Number: {{ cardNum }}
-            </tr>
+          <h3>User Information:</h3>
+            </br>First Name: {{ firstName }} Last Name: {{ lastName }}
+            </br>Email: {{ email }}
+            </br>Shipping Address: {{ address }}
+          <h3>Billing Information:</h3>
+            </br>Billing Address: {{ altaddress }}
+            </br>Card Number: {{ cardNum }}
                <!-- Cart -->
             <h1>Your Order</h1>
             <ul class="list-group mb-3 z-depth-1">
@@ -53,8 +50,6 @@
               </li>
             </ul>
             <!-- Cart -->
-        </tr>
-          </table>
     </div>
 </main>
 <!--Main layout-->
