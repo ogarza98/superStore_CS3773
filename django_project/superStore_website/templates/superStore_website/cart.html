@@ -139,6 +139,10 @@
                   <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
                   <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
                   {% endfor %}
+                  
+                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                    <label class="custom-control-label" for="credit">Credit card</label>
+                 
                 </div>
               </div>
               <div class="row">
