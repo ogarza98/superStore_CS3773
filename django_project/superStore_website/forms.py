@@ -22,9 +22,9 @@ class cart(forms.Form):
     )
 
     first_name = forms.CharField(max_length=80)
-    #last_name  = forms.CharField(max_length=80)
-    #user_name  = forms.CharField(max_length=80)
-    #email      = forms.CharField(max_length=80)
+    last_name  = forms.CharField(max_length=80)
+    user_name  = forms.CharField(max_length=80)
+    email      = forms.CharField(max_length=80)
     #street     = forms.CharField(max_length=100)
     #country    = forms.CharField(max_length=20, choices=COUNTRY, default='Choose')
     #state      = forms.CharField(max_length=2, choices=STATES, default='State')

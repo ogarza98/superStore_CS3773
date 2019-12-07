@@ -1,4 +1,10 @@
 {% extends "superStore_website/base.html" %}
 {% block content %}
-<h1>Thank you for your purchase{{ firstName }}</h1>
+<h1>
+Thank you for your purchase
+</br>First Name: {{ firstName }}
+</br>Last Name: {{ lastName }}
+</br>userName: {{ userName }}
+</br>Email: {{ email }}
+</h1>
 {% endblock content %}
