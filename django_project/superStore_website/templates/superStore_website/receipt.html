@@ -5,20 +5,19 @@
 
       <!-- Heading -->
       <h2 class="my-5 h2 text-center">Order Confirmation</h2>
-        <h1> Thank you for your purchase!
+        <h1> Thank you for your purchase!</h1>
           <table>
-            <tr>First Name: {{ firstName }}</tr>
-            <tr>Last Name: {{ lastName }}</tr>
-            <tr>userName: {{ userName }}</tr>
-            <tr>Email: {{ email }}</tr>
-            <tr>Address: {{ address }}</tr>
-            <tr>Alternate Address: {{ altaddress }}</tr>
-            <tr>Name on Card: {{ nameOnCd }}</tr>
-            <tr>Card Number: {{ cardNum }}</tr>
-            <tr>Expiration Date: {{ expireDt }}</tr>
-            <tr>CVV number: {{ cvv }}</tr>
-            <tr>
+            <tr>User Information:
+                <td>First Name: {{ firstName }} Last Name: {{ lastName }}</td>
+                <td>Email: {{ email }}</td>
+                <td>Shiping Address: {{ address }}</td>
+            </tr>
+            <tr>Billing Information:
+              <td>Billing Address: {{ altaddress }}</td>
+              <td>Card Number: {{ cardNum }}</td>
+            </tr>
                <!-- Cart -->
+            <h1>Your Order</h1>
             <ul class="list-group mb-3 z-depth-1">
               <li class="list-group-item d-flex justify-content-between lh-condensed">
                 <div>
@@ -56,7 +55,6 @@
             <!-- Cart -->
             </tr>
           </table>
-        </h1>
     </div>
 </main>
 <!--Main layout-->
