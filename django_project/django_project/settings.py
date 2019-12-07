@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'crispy_forms',
+    'users.apps.UsersConfig',
     'superStore_website.apps.SuperstoreWebsiteConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -123,5 +125,10 @@ MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
-CRISPY_TEMPLATE_PACK = 'bootsrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
+CHANGE_PASSWORD_REDIRECT_URL = 'login'
+CHANGE_PASSWORD_URL = 'login'
 
