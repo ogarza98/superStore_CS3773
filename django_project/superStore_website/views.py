@@ -33,7 +33,7 @@ def receipt(request):
             cardNum    = form.cleaned_data['cardNum']
             expireDt   = form.cleaned_data['expireDt']
             cvv        = form.cleaned_data['cvv']
-            cardType   = form.cleaned_data['paymentMethod']
+            cardType   = request.POST['paymentMethod']
             print(cardType)
             return render(request,'superStore_website/receipt.html',{"firstName": fname, "lastName": lname,
                           "userName": uname, "email": email, "address": address, "altaddress": altaddress,
