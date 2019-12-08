@@ -134,14 +134,11 @@
               <hr>
 
               <div class="d-block my-3">
-                <div class="custom-control custom-radio">
-                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                  <label class="custom-control-label" for="credit">Credit card</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                  <label class="custom-control-label" for="debit">Debit card</label>
-                </div>
+                <h1> Radio buttons go here </h1>
+                {% for choice in forms.paymentType %}
+                  <h1>{{ choice.data.value }} </h1>
+                {% endfor %}
+ 
               </div>
               <div class="row">
                 <div class="col-md-6 mb-3">
@@ -257,12 +254,5 @@
 
 
 <!--
-                <div class="custom-control custom-radio">
-                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                  <label class="custom-control-label" for="credit">Credit card</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                  <label class="custom-control-label" for="debit">Debit card</label>
-                </div>
+
 -->

@@ -31,7 +31,7 @@ class cart(forms.Form):
     altaddress = forms.CharField(max_length=100, required=False)
     #country    = forms.CharField(max_length=20, choices=COUNTRY, default='Choose')
     #state      = forms.CharField(max_length=2, choices=STATES, default='State')
-    paymentType = forms.ChoiceField(choices=PAYMENT_TYPE,widget=RadioSelect())
+    paymentType = forms.ChoiceField(choices=PAYMENT_TYPE)
     zipCode     = forms.CharField(max_length=20)
     cardNum     = forms.CharField(max_length=20)
     expireDt    = forms.CharField(max_length=6)
