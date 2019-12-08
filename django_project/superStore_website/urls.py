@@ -16,6 +16,8 @@ urlpatterns = [
     path('search/', views.search_results, name='search_results'),
     path('gallery/', views.gallery, name='gallery'),
     path('none/search/', views.no_results, name='none'),
+    path('cart/', views.Cart, name='cart'),
+    path('receipt/', views.receipt, name='receipt'),
 ]
 
 if settings.DEBUG:
