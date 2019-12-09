@@ -1,0 +1,14 @@
+      {% for item in order.get_cart_items %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>
+            {{ item.product.name }}
+            <span class="pull-right">
+
+            </span>
+          </td>
+          <td>{{ item.product.price }}</td>
+            <td>{{ item.product.item_name }}</td>
+        </tr>
+      {% empty %}
+      {% endfor %}

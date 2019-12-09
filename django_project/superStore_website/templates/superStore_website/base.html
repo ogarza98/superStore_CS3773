@@ -32,8 +32,8 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'home' %}">Superstore Website</a>
-            <form action="{% url 'search_results' %}" method="get"> <!-- Search bar code here start -->
+          <a class="navbar-brand mr-4" href="{% url 'test:home' %}">Superstore Website</a>
+            <form action="{% url 'test:search_results' %}" method="get"> <!-- Search bar code here start -->
                 <input name="q" type="text" placeholder="Search..." size = 20 style ="font-size:15px;">
             </form> <!-- Search bar code here end -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,9 +45,9 @@
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+                <a class="nav-item nav-link" href="{% url 'test:home' %}">Home</a>
                 <a class="nav-item nav-link" href="#">Cart</a>
-                <a class="nav-item nav-link" href="{% url 'help' %}">Help</a>
+                <a class="nav-item nav-link" href="{% url 'test:help' %}">Help</a>
             </div>
           </div>
         </div>
