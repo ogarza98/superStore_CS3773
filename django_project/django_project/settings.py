@@ -25,6 +25,8 @@ SECRET_KEY = '8%$kmbdo2+c)1d5^*w!k)s)obgcji@b+em0-vpq^n&x9w1x+0$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = ['*']
+
 #changing allowed host to ALLOWED_HOSTS[*] to allow any ip
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['*']
@@ -32,6 +34,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'crispy_forms',
+    'users.apps.UsersConfig',
     'superStore_website.apps.SuperstoreWebsiteConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -124,5 +128,10 @@ MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
-CRISPY_TEMPLATE_PACK = 'bootsrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
+CHANGE_PASSWORD_REDIRECT_URL = 'login'
+CHANGE_PASSWORD_URL = 'login'
 

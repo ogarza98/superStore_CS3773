@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.forms import ModelForm
 
+
 class Good(models.Model):
     ITEM_FRESHNESS = (
         ('G', 'GOOD'),
@@ -18,4 +19,4 @@ class Good(models.Model):
 
     def __str__(self):
         return self.item_name
-        
+
