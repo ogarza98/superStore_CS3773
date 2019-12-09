@@ -55,7 +55,7 @@ def search_results(request):
 def no_results(request):
     return render(request, 'superStore_website/no_results.html')
 def Cart(request):
-    return render(request,'superStore_website/cart.html')
+    return render(request,'superStore_website/cart.html', {'form' : cart})
 
 def receipt(request):
     if request.method == "POST":
