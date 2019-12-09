@@ -80,7 +80,9 @@
                   <label for="country">Country</label>
                   <select class="custom-select d-block w-100" id="country" required>
                     <option value="">Choose...</option>
-                    <option>United States</option>
+                    {% for ct in form.country %}
+                      <option value={{ ct }}></option>
+                    {% endfor %}
                   </select>
                   <div class="invalid-feedback">
                     Please select a valid country.
@@ -92,19 +94,16 @@
                 <!--Grid column-->
                 <div class="col-lg-4 col-md-6 mb-4">
 
-                  <label for="state">State</label>
-                  <select class="custom-select d-block w-100" id="state" required>
+                  <label>State</label><br>
+                  <select class="custom-select d-block w-100" required>
                     <option value="">Choose...</option>
-                    {% with 'AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY' as list %}
-                        {% for state in list.split %}
-                            <option>{{ state }}</option>
-                        {% endfor %}
-                    {% endwith %}
+                    {% for st in form.state %}
+                      <option value={{ st }}></option>
+                    {% endfor %}
                   </select>
                   <div class="invalid-feedback">
                     Please provide a valid state.
                   </div>
-
                 </div>
                 <!--Grid column-->
 

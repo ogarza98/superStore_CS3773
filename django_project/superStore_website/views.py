@@ -74,6 +74,10 @@ def receipt(request):
             cardNum    = form.cleaned_data['cardNum']
             expireDt   = form.cleaned_data['expireDt']
             cvv        = form.cleaned_data['cvv']
+            card       = request.POST.get('card')
+            print(card)
+            state      = request.POST.get('state')
+            print(state)
             return render(request,'superStore_website/receipt.html',{"firstName": fname, "lastName": lname,
                          "email": email, "address": address, "altaddress": altaddress,
                           "nameOnCd": nameOnCd, "cardNum": cardNum, "expireDt": expireDt, "cvv": cvv})
