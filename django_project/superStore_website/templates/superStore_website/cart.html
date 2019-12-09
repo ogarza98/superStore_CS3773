@@ -20,14 +20,14 @@
             <form class="card-body" method='POST' action="{% url 'receipt' %}">
                {% csrf_token %}
 
+               <h4>User Information: </h4><br>
               <!--Grid row-->
               <div class="row">
-
                 <!--Grid column-->
                 <div class="col-md-6 mb-2">
 
-                  <!--firstName-->
-                  <div class="md-form ">
+                  <!--firstName <div class="md-form ">-->
+                  <div>
                     <input type="text" name="first_name" class="form-control">
                     <label>First name</label>
                   </div>
@@ -35,8 +35,8 @@
                 </div>
                 <!--Grid column-->
 
-                <!--Grid column-->
-                <div class="col-md-6 mb-2">
+                <!--Grid column <div class="col-md-6 mb-2">-->
+                <div>
 
                   <!--lastName-->
                   <div class="md-form">
@@ -50,8 +50,8 @@
               </div>
               <!--Grid row-->
 
-              <!--email-->
-              <div class="md-form mb-5">
+              <!--email  <div class="md-form mb-5">-->
+              <div>
                 <input type="text" name="email"class="form-control" placeholder="youremail@example.com">
                 <label>Email</label>
               </div>
@@ -59,14 +59,14 @@
               <hr>
               <h4>Billing Address: </h4><br>
 
-              <!--address-->
-              <div class="md-form mb-5">
+              <!--address class="md-form mb-5"-->
+              <div >
                 <input type="text" name="address" class="form-control" placeholder="1234 Main St">
                 <label>Address</label>
               </div>
 
-              <!--address-2-->
-              <div class="md-form mb-5">
+              <!--address-2 class="md-form mb-5"-->
+              <div>
                 <input type="text" name="altaddress" class="form-control" placeholder="Apartment or suite">
                 <label>Address Line 2 (optional)</label>
               </div>
@@ -127,15 +127,15 @@
                <!--
                  add code here
                -->
-                            <!--address-->
+              <!--address class="md-form mb-5"-->
               <h4>Shipping Address: </h4><br>
-              <div class="md-form mb-5">
+              <div>
                 <input type="text" name="address" class="form-control" placeholder="1234 Main St">
                 <label>Address</label>
               </div>
 
-              <!--address-2-->
-              <div class="md-form mb-5">
+              <!--address-2 class="md-form mb-5"-->
+              <div >
                 <input type="text" name="altaddress" class="form-control" placeholder="Apartment or suite">
                 <label>Address Line 2 (optional)</label>
               </div>
@@ -235,6 +235,13 @@
                   </div>
                 </div>
               </div>
+              <hr class="mb-4">
+              <h4>Delivery Option: </h4>
+              {% for choice in form.deliveryType %}
+              <div>
+                {{ choice }}
+              </div>
+              {% endfor %}
               <hr class="mb-4">
               <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
 

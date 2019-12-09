@@ -21,6 +21,10 @@ class cart(forms.Form):
         ('PayPal', 'PayPal'),
         ('Store Credit', 'Store Credit'),
     )
+    DELIVERY_TYPE = (
+        ('Quick Delivery', 'Quick Delivery'),
+        ('No Rush', 'No Rush'),
+    )
     first_name = forms.CharField(max_length=80)
     last_name  = forms.CharField(max_length=80)
     email      = forms.CharField(max_length=80)
@@ -30,6 +34,7 @@ class cart(forms.Form):
     #state      = forms.CharField(max_length=2, choices=STATES, default='State')
     zipCode     = forms.CharField(max_length=20)
     paymentType = forms.ChoiceField(choices=PAYMENT_TYPE,widget=forms.RadioSelect())
+    deliveryType = forms.ChoiceField(choices=DELIVERY_TYPE, widget=RadioSelect())
     nameOnCd    = forms.CharField(max_length=160)
     cardNum     = forms.CharField(max_length=20)
     expireDt    = forms.CharField(max_length=6)
