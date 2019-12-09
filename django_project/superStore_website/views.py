@@ -66,8 +66,6 @@ def receipt(request):
             #print(fname)
             lname = form.cleaned_data['last_name']
             #print(lname)
-            uname = form.cleaned_data['user_name']
-            #print(uname)
             email = form.cleaned_data['email']
             #print(email)
             address    = form.cleaned_data['address']
@@ -77,7 +75,7 @@ def receipt(request):
             expireDt   = form.cleaned_data['expireDt']
             cvv        = form.cleaned_data['cvv']
             return render(request,'superStore_website/receipt.html',{"firstName": fname, "lastName": lname,
-                          "userName": uname, "email": email, "address": address, "altaddress": altaddress,
+                         "email": email, "address": address, "altaddress": altaddress,
                           "nameOnCd": nameOnCd, "cardNum": cardNum, "expireDt": expireDt, "cvv": cvv})
     else:
         form = cart()
