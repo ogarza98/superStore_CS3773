@@ -48,7 +48,6 @@ def search_results(request):
         'results': Good.objects.filter(Q(item_name__icontains=query)),
     }
 
-
     if not check:
         return render(request, 'superStore_website/no_results.html')
 
@@ -72,7 +71,7 @@ def get_user_pending_order(request):
 def Cart(request):
     existing_order = get_user_pending_order(request)
     context = {
-        'order': existing_order
+        'order': existing_order,
     }
     return render(request, 'superStore_website/cart.html', context)
 

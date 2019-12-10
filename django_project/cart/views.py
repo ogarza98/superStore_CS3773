@@ -37,3 +37,11 @@ def order_details(request, **kwargs):
         'order': existing_order
     }
     return render(request, 'cart/order_summary.html', context)
+
+
+def delete_from_cart(request, item_id):
+    item_to_delete = OrderItem.objects.filter(pk=item_id)
+    if item_to_delete.exists():
+        item_to_delete[0].delete()
+        messages.info(request, "Item has been deleted")
+    return redirect(reverse('cart'))
