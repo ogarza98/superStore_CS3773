@@ -78,10 +78,10 @@
                 <div class="col-lg-4 col-md-12 mb-4">
 
                   <label for="country">Country</label>
-                  <select class="custom-select d-block w-100" id="country" required>
+                  <select class="custom-select d-block w-100" id="country" name="country" required>
                     <option value="">Choose...</option>
                     {% for ct in form.country %}
-                      <option value={{ ct }}></option>
+                      {{ ct }}
                     {% endfor %}
                   </select>
                   <div class="invalid-feedback">
@@ -95,10 +95,10 @@
                 <div class="col-lg-4 col-md-6 mb-4">
 
                   <label>State</label><br>
-                  <select class="custom-select d-block w-100" required>
+                  <select class="custom-select d-block w-100" id="stateOne" name="stateOne" required>
                     <option value="">Choose...</option>
                     {% for st in form.state %}
-                      <option value={{ st }}></option>
+                      {{ st }}
                     {% endfor %}
                   </select>
                   <div class="invalid-feedback">
@@ -110,10 +110,10 @@
                 <!--Grid column-->
                 <div class="col-lg-4 col-md-6 mb-4">
 
-                  <label for="zip">Zip</label>
-                  <input type="text" class="form-control" name="zipCode" placeholder="" required>
+                  <label for="city">City</label>
+                  <input type="text" class="form-control" name="city" placeholder="" required>
                   <div class="invalid-feedback">
-                    Zip code required.
+                    City required.
                   </div>
 
                 </div>
@@ -121,7 +121,15 @@
 
               </div>
               <!--Grid row-->
+              <div class="col-lg-4 col-md-6 mb-4">
 
+                <label for="zip">Zip</label>
+                <input type="text" class="form-control" name="zipCode" placeholder="" required>
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+
+              </div>
               <hr>
                <!--
                  add code here
@@ -129,13 +137,13 @@
               <!--address class="md-form mb-5"-->
               <h4>Shipping Address: </h4><br>
               <div>
-                <input type="text" name="address" class="form-control" placeholder="1234 Main St">
+                <input type="text" name="shipAddLine_one" class="form-control" placeholder="1234 Main St">
                 <label>Address</label>
               </div>
 
               <!--address-2 class="md-form mb-5"-->
               <div >
-                <input type="text" name="altaddress" class="form-control" placeholder="Apartment or suite">
+                <input type="text" name="shipAddLine_two" class="form-control" placeholder="Apartment or suite">
                 <label>Address Line 2 (optional)</label>
               </div>
 
@@ -146,9 +154,11 @@
                 <div class="col-lg-4 col-md-12 mb-4">
 
                   <label for="country">Country</label>
-                  <select class="custom-select d-block w-100" id="country" required>
+                  <select class="custom-select d-block w-100" id="shipCountry" required>
                     <option value="">Choose...</option>
-                    <option>United States</option>
+                    {% for ct in form.shipCountry %}
+                      {{ ct }}
+                    {% endfor %}
                   </select>
                   <div class="invalid-feedback">
                     Please select a valid country.
@@ -162,14 +172,12 @@
                 <div class="col-lg-4 col-md-6 mb-4">
 
                   <label for="state">State</label>
-                  <select class="custom-select d-block w-100" id="state" required>
-                    <option value="">Choose...</option>
-                    {% with 'AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY' as list %}
-                        {% for state in list.split %}
-                            <option>{{ state }}</option>
-                        {% endfor %}
-                    {% endwith %}
-                  </select>
+                    <select class="custom-select d-block w-100" id="shipState" name="shipState" required>
+                      <option value="">Choose...</option>
+                      {% for st in form.shipState %}
+                        {{ st }}
+                      {% endfor %}
+                    </select>
                   <div class="invalid-feedback">
                     Please provide a valid state.
                   </div>
@@ -180,12 +188,19 @@
                 <!--Grid column-->
                 <div class="col-lg-4 col-md-6 mb-4">
 
+                  <label for="city">City</label>
+                  <input type="text" class="form-control" name="shipCity" placeholder="" required>
+                  <div class="invalid-feedback">
+                    City required.
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+
                   <label for="zip">Zip</label>
-                  <input type="text" class="form-control" name="zipCode" placeholder="" required>
+                  <input type="text" class="form-control" name="shipZipCode" placeholder="" required>
                   <div class="invalid-feedback">
                     Zip code required.
                   </div>
-
                 </div>
               </div>
               <hr>
@@ -236,7 +251,7 @@
               </div>
               <hr class="mb-4">
               <h4>Delivery Option: </h4>
-              {% for choice in form.deliveryType %}
+              {% for choice in form.deliveryOpt %}
               <div>
                 {{ choice }}
               </div>

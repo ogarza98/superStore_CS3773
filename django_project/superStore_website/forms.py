@@ -25,6 +25,7 @@ class cart(forms.Form):
         ('Quick Delivery', 'Quick Delivery'),
         ('No Rush', 'No Rush'),
     )
+
     first_name = forms.CharField(max_length=80)
     last_name  = forms.CharField(max_length=80)
     email      = forms.CharField(max_length=80)
@@ -33,6 +34,7 @@ class cart(forms.Form):
     country    = forms.ChoiceField(choices=COUNTRY)
     state      = forms.ChoiceField(choices=STATES)
     zipCode    = forms.CharField(max_length=20)
+    city       = forms.CharField(max_length=20)
     paymentType  = forms.ChoiceField(choices=PAYMENT_TYPE,widget=forms.RadioSelect())
     nameOnCd    = forms.CharField(max_length=160)
     cardNum     = forms.CharField(max_length=20)
@@ -43,4 +45,5 @@ class cart(forms.Form):
     shipCountry = forms.ChoiceField(choices=COUNTRY)
     shipState   = forms.ChoiceField(choices=STATES)
     shipZipCode = forms.CharField(max_length=20)
+    shipCity    = forms.CharField(max_length=20)
     deliveryOpt = forms.ChoiceField(choices=DELIVERY_TYPE, widget=RadioSelect())
