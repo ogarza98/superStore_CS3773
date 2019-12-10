@@ -20,4 +20,5 @@ urlpatterns = [
     path('home/', include('superStore_website.urls')),
     path('gallery/', include('superStore_website.urls')),
     path('none/', include('superStore_website.urls')),
+    path('cart/', include('cart.urls')),
 ]
