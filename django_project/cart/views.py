@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Good, Order, OrderItem
+from superStore_website.models import Good
+from .models import Order, OrderItem
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.urls import reverse

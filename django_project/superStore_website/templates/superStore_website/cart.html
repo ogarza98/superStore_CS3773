@@ -205,7 +205,7 @@
                 </div>
                 <span class="text-muted" id="price">${{ item.product.price }}</span>
                 <a href="{% url 'cart:delete_item' item.id %}" data-balloon="remove this item from cart" class="text-danger" onclick="return confirm_delete();">
-                  <i class="fas fa-trash"></i>
+                  <i class="button">X</i>
                 </a>
               </li>
             {% endfor %}

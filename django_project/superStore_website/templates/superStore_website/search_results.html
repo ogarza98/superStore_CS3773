@@ -2,18 +2,21 @@
 {% block content %}
 
     {% for good in results %}
-        <article class="media content-section">
-          <div class="media-body">
-            <div class="article-metadata">
-                <h4><b>{{ good.item_name }} -  $ {{ good.price }}</b></h4>
-            </div>
-                <a href="{{ good.goods_image.url }}" data-lightbox="gallery" data-title="{{ good.item_name }}">
-                    <img class="resize" src="{{ good.goods_image.url }}">
-                </a>
-              <p class="article-content">{{ post.content }}</p>
-              <button>Add To Cart</button>
-          </div>
-        </article>
+        <div class="column">
+            <article class="media content-section">
+              <div class="media-body">
+                <div class="article-metadata">
+                    <h4><b>{{ good.item_name }} -  $ {{ good.price }}</b></h4>
+                    <pre class="tab">Stock: {{ good.item_stock }}       Freshness: {{ good.freshness }}</pre>
+                    <a href="{% url 'cart:add_to_cart' good.id %}"><button>Add to Cart</button></a>
+                </div>
+                    <a href="{{ good.goods_image.url }}" data-lightbox="gallery" data-title="{{ good.item_name }}">
+                        <img class="resize" src="{{ good.goods_image.url }}">
+                    </a>
+                  <p class="article-content">{{ post.content }}</p>
+              </div>
+            </article>
+        </div>
     {% endfor %}
 
 {% endblock content %}
