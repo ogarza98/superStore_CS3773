@@ -82,7 +82,7 @@ def receipt(request):
         print(city)
         card       = request.POST.get('paymentType')
         print(card)
-        state      = request.POST.get('state')
+        state      = request.POST.get('stateOne')
         print(state)
 
         shipAddLine_one = form.cleaned_data['shipAddLine_one']
