@@ -41,19 +41,19 @@ def checkout(request):
 
 def search_results(request):
     query = request.GET.get('q')
+    check = Good.objects.filter(Q(item_name__icontains=query))
+
     results = {
-        'results': Good.objects.filter(Q(item_name__icontains=query))
+        'results': Good.objects.filter(Q(item_name__icontains=query)),
     }
 
-    if not query:
-        no_results()
+
+    if not check:
+        return render(request, 'superStore_website/no_results.html')
 
     else:
         return render(request, 'superStore_website/search_results.html', results)
 
-
-def no_results(request):
-    return render(request, 'superStore_website/no_results.html')
 def Cart(request):
     return render(request,'superStore_website/cart.html')
 
