@@ -55,10 +55,6 @@ def search_results(request):
         return render(request, 'superStore_website/search_results.html', results)
 
 
-def no_results(request):
-    return render(request, 'superStore_website/no_results.html')
-
-
 def get_user_pending_order(request):
     # get order for the correct user
     order = Order.objects.filter(is_ordered=False)
@@ -72,32 +68,56 @@ def Cart(request):
     existing_order = get_user_pending_order(request)
     context = {
         'order': existing_order,
+        'form': cart,
     }
     return render(request, 'superStore_website/cart.html', context)
 
+    # return render(request,'superStore_website/cart.html', {'form' : cart})
 
 def receipt(request):
+    existing_order = get_user_pending_order(request)
+
     if request.method == "POST":
         form = cart(request.POST)
+        print(request.POST)
         print(form.is_valid())
-        if form.is_valid():
-            fname = form.cleaned_data['first_name']
-            #print(fname)
-            lname = form.cleaned_data['last_name']
-            #print(lname)
-            uname = form.cleaned_data['user_name']
-            #print(uname)
-            email = form.cleaned_data['email']
-            #print(email)
-            address    = form.cleaned_data['address']
-            altaddress = form.cleaned_data['altaddress']
-            nameOnCd   = form.cleaned_data['nameOnCd']
-            cardNum    = form.cleaned_data['cardNum']
-            expireDt   = form.cleaned_data['expireDt']
-            cvv        = form.cleaned_data['cvv']
-            return render(request,'superStore_website/receipt.html',{"firstName": fname, "lastName": lname,
-                          "userName": uname, "email": email, "address": address, "altaddress": altaddress,
-                          "nameOnCd": nameOnCd, "cardNum": cardNum, "expireDt": expireDt, "cvv": cvv})
+        #if form.is_valid():
+        fname = form.cleaned_data['first_name']
+        #print(fname)
+        lname = form.cleaned_data['last_name']
+        #print(lname)
+        email = form.cleaned_data['email']
+        #print(email)
+        address    = form.cleaned_data['address']
+        altaddress = form.cleaned_data['altaddress']
+        nameOnCd   = form.cleaned_data['nameOnCd']
+        cardNum    = form.cleaned_data['cardNum']
+        expireDt   = form.cleaned_data['expireDt']
+        cvv        = form.cleaned_data['cvv']
+        zipCode    = form.cleaned_data['zipCode']
+        country    = request.POST.get('country')
+        print(country)
+        city       = form.cleaned_data['city']
+        print(city)
+        card       = request.POST.get('paymentType')
+        print(card)
+        state      = request.POST.get('stateOne')
+        print(state)
+
+        shipAddLine_one = form.cleaned_data['shipAddLine_one']
+        shipAddLine_two = form.cleaned_data['shipAddLine_two']
+        shipCountry = request.POST.get('shipCountry')
+        shipState   = request.POST.get('shipState')
+        shipZipCode = form.cleaned_data['shipZipCode']
+        shipCity    = form.cleaned_data['shipCity']
+        deliveryOpt = request.POST.get('deliveryOpt')
+        
+        return render(request,'superStore_website/receipt.html',{"firstName": fname, "lastName": lname,
+                        "email": email, "address": address, "altaddress": altaddress, "nameOnCd": nameOnCd, 
+                        "cardNum": cardNum, "expireDt": expireDt, "cvv": cvv, "card": card, "zipCode": zipCode, "country": country,
+                        "city": city, "state": state, 'order': existing_order, "shipAddLine_one": shipAddLine_one, "shipAddLine_two": shipAddLine_two,
+                        "shipCountry": shipCountry, "shipState": shipState, "shipZipCode": shipZipCode, "shipCity": shipCity, 
+                        "deliveryOpt": deliveryOpt})
     else:
         form = cart()
     return render(request,'superStore_website/receipt.html')
