@@ -55,10 +55,6 @@ def search_results(request):
         return render(request, 'superStore_website/search_results.html', results)
 
 
-def no_results(request):
-    return render(request, 'superStore_website/no_results.html')
-
-
 def get_user_pending_order(request):
     # get order for the correct user
     order = Order.objects.filter(is_ordered=False)

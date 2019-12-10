@@ -10,7 +10,9 @@
                         <div class="article-metadata">
                             <h4><b>{{ good.item_name }} -  $ {{ good.price }}</b></h4>
                             <pre class="tab">Stock: {{ good.item_stock }}       Freshness: {{ good.freshness }}</pre>
+                            {% if user.is_authenticated %}
                             <a href="{% url 'cart:add_to_cart' good.id %}"><button>Add to Cart</button></a>
+                            {% endif %}
                         </div>
                         <a href="{{ good.goods_image.url }}" data-lightbox="gallery" data-title="{{ good.item_name }}">
                             <img class="resize_gallery" src="{{ good.goods_image.url }}" height="130">
