@@ -18,7 +18,7 @@ def add_to_cart(request, **kwargs):
         user_order.save()
 
     # show confirmation message and redirect back to the same page
-    messages.info(request, "item added to cart")
+    # messages.info(request, "item added to cart")
     return redirect(reverse('home'))
 
 

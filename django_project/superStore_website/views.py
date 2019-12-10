@@ -9,7 +9,8 @@ from django.contrib.auth.models import User
 from django.db.models import Q
 
 from django.http import HttpResponseRedirect
-from superStore_website.forms import cart
+from .forms import cart
+from cart.models import Order
 
 
 def home(request):
@@ -54,8 +55,24 @@ def search_results(request):
 
 def no_results(request):
     return render(request, 'superStore_website/no_results.html')
+
+
+def get_user_pending_order(request):
+    # get order for the correct user
+    order = Order.objects.filter(is_ordered=False)
+    if order.exists():
+        # get the only order in the list of filtered orders
+        return order[0]
+    return 0
+
+
 def Cart(request):
-    return render(request,'superStore_website/cart.html')
+    existing_order = get_user_pending_order(request)
+    context = {
+        'order': existing_order
+    }
+    return render(request, 'superStore_website/cart.html', context)
+
 
 def receipt(request):
     if request.method == "POST":
