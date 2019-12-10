@@ -95,7 +95,7 @@ def receipt(request):
         
         return render(request,'superStore_website/receipt.html',{"firstName": fname, "lastName": lname,
                         "email": email, "address": address, "altaddress": altaddress, "nameOnCd": nameOnCd, 
-                        "cardNum": cardNum, "expireDt": expireDt, "cvv": cvv, "card:": card, "zipCode": zipCode, "country": country,
+                        "cardNum": cardNum, "expireDt": expireDt, "cvv": cvv, "card": card, "zipCode": zipCode, "country": country,
                         "city": city, "state": state, "shipAddLine_one": shipAddLine_one, "shipAddLine_two": shipAddLine_two,
                         "shipCountry": shipCountry, "shipState": shipState, "shipZipCode": shipZipCode, "shipCity": shipCity, 
                         "deliveryOpt": deliveryOpt})
