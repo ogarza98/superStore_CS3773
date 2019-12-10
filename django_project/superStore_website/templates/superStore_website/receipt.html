@@ -10,16 +10,14 @@
           <h3>User Information:</h3>
             <h5>Name: {{ firstName }} {{ lastName }}</h5>
             <h5>Email: {{ email }}</h5>
-          <h3>Shipping Information:</h3>
-            <h4>Shipping Address: </h4>
+          <h3>Shipping Address:</h3>
             <h5>{{ firstName }} {{ lastName }}</h5>
             <h5>{{ shipAddLine_one }} {{ shipAddLine_two }} </h5>
-            <h5>{{ shipCity}} , {{ shipState }} {{ shipZipCode }} {{ shipCountry }}</h5></br>
-          <h3>Billing Information:</h3>
-            <h4>Billing Address: </h4>
+            <h5>{{ shipCity}} {{ shipState }} {{ shipZipCode }} {{ shipCountry }}</h5></br>
+          <h3>Billing Address:</h3>
             <h5>{{ firstName }} {{ lastName }}</h5>
             <h5>{{ address }} {{ altaddress}} </h5>
-            <h5>{{ city }} , {{ state }} {{ zipCode }} {{ country }}</h5>
+            <h5>{{ city }} {{ state }} {{ zipCode }} {{ country }}</h5>
             <h5>Payment Method: {{ card }}</h5>
       </div>
       <div></br>
