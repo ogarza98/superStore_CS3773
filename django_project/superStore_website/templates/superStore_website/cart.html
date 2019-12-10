@@ -154,7 +154,7 @@
                 <div class="col-lg-4 col-md-12 mb-4">
 
                   <label for="country">Country</label>
-                  <select class="custom-select d-block w-100" id="shipCountry" required>
+                  <select class="custom-select d-block w-100" id="shipCountry" name="shipCountry" required>
                     <option value="">Choose...</option>
                     {% for ct in form.shipCountry %}
                       {{ ct }}
