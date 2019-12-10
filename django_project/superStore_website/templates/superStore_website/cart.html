@@ -192,7 +192,7 @@
           <!-- Heading -->
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted">Your cart</span>
-            <span class="badge badge-secondary badge-pill">3</span>
+            <span class="badge badge-secondary badge-pill">{{ order.get_cart_items|length }}</span>
           </h4>
 
           <!-- Cart -->
@@ -219,7 +219,7 @@
             </li>
             <li class="list-group-item d-flex justify-content-between">
               <span>Total (USD)</span>
-              <strong id="demo"></strong>
+              <strong>$</strong><strong id="demo"></strong>
             </li>
           </ul>
           <!-- Cart -->
@@ -258,9 +258,10 @@
 var total_amount = 0;
 
 function total_price (x) {
-  return x = x + parseFloat(document.getElementById("price").innerHTML.replace(/\$/g,'')) - parseFloat(document.getElementById("discount").innerHTML.replace(/\$/g,''));
+  return x = x + {{ order.get_cart_total }} - parseFloat(document.getElementById("discount").innerHTML.replace(/\$/g,''));
 }
 document.getElementById("demo").innerHTML = total_price(total_amount);
+
 </script>
 
 {% endblock content %}
